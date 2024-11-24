@@ -19,6 +19,36 @@ namespace WilliamAlvarezFase3Grupo108
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            string password = "unad";
+
+            if (txtPassword.Text == password)
+            {
+                MessageBox.Show("contraseña correcta", "",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // abrir formulario ingreso de datos 
+
+                ingresoDatos ingreso = new ingresoDatos();
+                ingreso.Show();
+
+                // cerrar formulario de validar 
+
+                this.Hide();
+
+            }
+            else
+
+            {
+                MessageBox.Show("contraseña incorrecta", "",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // limpiar campo de texto para intentar de nuevo
+
+                txtPassword.Clear();
+                txtPassword.Focus();
+
+
+            }
 
         }
 
@@ -37,6 +67,14 @@ namespace WilliamAlvarezFase3Grupo108
             // Habilitar el campo de contraseña y el botón "Ingresar"
             txtPassword. Enabled = true;
             btnIngresar.Enabled = true;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+           
+
+
+
         }
     }
 }
