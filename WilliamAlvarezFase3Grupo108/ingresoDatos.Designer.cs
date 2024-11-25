@@ -29,6 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPila = new System.Windows.Forms.TabPage();
+            this.dgPila = new System.Windows.Forms.DataGridView();
+            this.btnEliminarpila = new System.Windows.Forms.Button();
+            this.btnReportepila = new System.Windows.Forms.Button();
+            this.tabCola = new System.Windows.Forms.TabPage();
+            this.dgCola = new System.Windows.Forms.DataGridView();
+            this.btnEliminarcola = new System.Windows.Forms.Button();
+            this.btnReportecola = new System.Windows.Forms.Button();
+            this.tabLista = new System.Windows.Forms.TabPage();
+            this.dgLista = new System.Windows.Forms.DataGridView();
+            this.btnEliminarlista = new System.Windows.Forms.Button();
+            this.btnReportelista = new System.Windows.Forms.Button();
             this.cmbTipoestructura = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -56,28 +69,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPila = new System.Windows.Forms.TabPage();
-            this.tabCola = new System.Windows.Forms.TabPage();
-            this.tabLista = new System.Windows.Forms.TabPage();
-            this.dgPila = new System.Windows.Forms.DataGridView();
-            this.btnReportepila = new System.Windows.Forms.Button();
-            this.btnEliminarpila = new System.Windows.Forms.Button();
-            this.dgCola = new System.Windows.Forms.DataGridView();
-            this.btnEliminarcola = new System.Windows.Forms.Button();
-            this.btnReportecola = new System.Windows.Forms.Button();
-            this.dgLista = new System.Windows.Forms.DataGridView();
-            this.btnEliminarlista = new System.Windows.Forms.Button();
-            this.btnReportelista = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.grpbtipoAtencion.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPila.SuspendLayout();
-            this.tabCola.SuspendLayout();
-            this.tabLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPila)).BeginInit();
+            this.tabCola.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCola)).BeginInit();
+            this.tabLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgLista)).BeginInit();
+            this.grpbtipoAtencion.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -114,6 +114,134 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPila);
+            this.tabControl1.Controls.Add(this.tabCola);
+            this.tabControl1.Controls.Add(this.tabLista);
+            this.tabControl1.Location = new System.Drawing.Point(0, 443);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(885, 122);
+            this.tabControl1.TabIndex = 25;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            // 
+            // tabPila
+            // 
+            this.tabPila.Controls.Add(this.dgPila);
+            this.tabPila.Controls.Add(this.btnEliminarpila);
+            this.tabPila.Controls.Add(this.btnReportepila);
+            this.tabPila.Location = new System.Drawing.Point(4, 25);
+            this.tabPila.Name = "tabPila";
+            this.tabPila.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPila.Size = new System.Drawing.Size(877, 93);
+            this.tabPila.TabIndex = 0;
+            this.tabPila.Text = "Pila";
+            this.tabPila.UseVisualStyleBackColor = true;
+            // 
+            // dgPila
+            // 
+            this.dgPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPila.Location = new System.Drawing.Point(16, 6);
+            this.dgPila.Name = "dgPila";
+            this.dgPila.Size = new System.Drawing.Size(715, 84);
+            this.dgPila.TabIndex = 0;
+            // 
+            // btnEliminarpila
+            // 
+            this.btnEliminarpila.Location = new System.Drawing.Point(739, 52);
+            this.btnEliminarpila.Name = "btnEliminarpila";
+            this.btnEliminarpila.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarpila.TabIndex = 1;
+            this.btnEliminarpila.Text = "Eliminar";
+            this.btnEliminarpila.UseVisualStyleBackColor = true;
+            // 
+            // btnReportepila
+            // 
+            this.btnReportepila.Location = new System.Drawing.Point(739, 6);
+            this.btnReportepila.Name = "btnReportepila";
+            this.btnReportepila.Size = new System.Drawing.Size(75, 23);
+            this.btnReportepila.TabIndex = 0;
+            this.btnReportepila.Text = "Reporte";
+            this.btnReportepila.UseVisualStyleBackColor = true;
+            // 
+            // tabCola
+            // 
+            this.tabCola.Controls.Add(this.dgCola);
+            this.tabCola.Controls.Add(this.btnEliminarcola);
+            this.tabCola.Controls.Add(this.btnReportecola);
+            this.tabCola.Location = new System.Drawing.Point(4, 25);
+            this.tabCola.Name = "tabCola";
+            this.tabCola.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCola.Size = new System.Drawing.Size(877, 93);
+            this.tabCola.TabIndex = 1;
+            this.tabCola.Text = "Cola";
+            this.tabCola.UseVisualStyleBackColor = true;
+            // 
+            // dgCola
+            // 
+            this.dgCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCola.Location = new System.Drawing.Point(6, 4);
+            this.dgCola.Name = "dgCola";
+            this.dgCola.Size = new System.Drawing.Size(718, 84);
+            this.dgCola.TabIndex = 2;
+            // 
+            // btnEliminarcola
+            // 
+            this.btnEliminarcola.Location = new System.Drawing.Point(767, 53);
+            this.btnEliminarcola.Name = "btnEliminarcola";
+            this.btnEliminarcola.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarcola.TabIndex = 4;
+            this.btnEliminarcola.Text = "Eliminar";
+            this.btnEliminarcola.UseVisualStyleBackColor = true;
+            // 
+            // btnReportecola
+            // 
+            this.btnReportecola.Location = new System.Drawing.Point(767, 7);
+            this.btnReportecola.Name = "btnReportecola";
+            this.btnReportecola.Size = new System.Drawing.Size(75, 23);
+            this.btnReportecola.TabIndex = 3;
+            this.btnReportecola.Text = "Reporte";
+            this.btnReportecola.UseVisualStyleBackColor = true;
+            // 
+            // tabLista
+            // 
+            this.tabLista.Controls.Add(this.dgLista);
+            this.tabLista.Controls.Add(this.btnEliminarlista);
+            this.tabLista.Controls.Add(this.btnReportelista);
+            this.tabLista.Location = new System.Drawing.Point(4, 25);
+            this.tabLista.Name = "tabLista";
+            this.tabLista.Size = new System.Drawing.Size(877, 93);
+            this.tabLista.TabIndex = 2;
+            this.tabLista.Text = "Lista";
+            this.tabLista.UseVisualStyleBackColor = true;
+            // 
+            // dgLista
+            // 
+            this.dgLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLista.Location = new System.Drawing.Point(5, 4);
+            this.dgLista.Name = "dgLista";
+            this.dgLista.Size = new System.Drawing.Size(719, 84);
+            this.dgLista.TabIndex = 5;
+            // 
+            // btnEliminarlista
+            // 
+            this.btnEliminarlista.Location = new System.Drawing.Point(767, 53);
+            this.btnEliminarlista.Name = "btnEliminarlista";
+            this.btnEliminarlista.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarlista.TabIndex = 7;
+            this.btnEliminarlista.Text = "Eliminar";
+            this.btnEliminarlista.UseVisualStyleBackColor = true;
+            // 
+            // btnReportelista
+            // 
+            this.btnReportelista.Location = new System.Drawing.Point(767, 7);
+            this.btnReportelista.Name = "btnReportelista";
+            this.btnReportelista.Size = new System.Drawing.Size(75, 23);
+            this.btnReportelista.TabIndex = 6;
+            this.btnReportelista.Text = "Reporte";
+            this.btnReportelista.UseVisualStyleBackColor = true;
             // 
             // cmbTipoestructura
             // 
@@ -252,6 +380,7 @@
             // 
             // txtReportedatos
             // 
+            this.txtReportedatos.Enabled = false;
             this.txtReportedatos.Location = new System.Drawing.Point(186, 384);
             this.txtReportedatos.Name = "txtReportedatos";
             this.txtReportedatos.Size = new System.Drawing.Size(224, 24);
@@ -259,6 +388,7 @@
             // 
             // txtValorcopago
             // 
+            this.txtValorcopago.Enabled = false;
             this.txtValorcopago.Location = new System.Drawing.Point(186, 256);
             this.txtValorcopago.Name = "txtValorcopago";
             this.txtValorcopago.Size = new System.Drawing.Size(224, 24);
@@ -277,6 +407,7 @@
             this.cmbEstrato.Location = new System.Drawing.Point(186, 179);
             this.cmbEstrato.Name = "cmbEstrato";
             this.cmbEstrato.Size = new System.Drawing.Size(224, 24);
+            this.cmbEstrato.Sorted = true;
             this.cmbEstrato.TabIndex = 9;
             // 
             // txtNombre
@@ -375,134 +506,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "EPS Salvando Vidas";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPila);
-            this.tabControl1.Controls.Add(this.tabCola);
-            this.tabControl1.Controls.Add(this.tabLista);
-            this.tabControl1.Location = new System.Drawing.Point(0, 443);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(885, 122);
-            this.tabControl1.TabIndex = 25;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // tabPila
-            // 
-            this.tabPila.Controls.Add(this.dgPila);
-            this.tabPila.Controls.Add(this.btnEliminarpila);
-            this.tabPila.Controls.Add(this.btnReportepila);
-            this.tabPila.Location = new System.Drawing.Point(4, 25);
-            this.tabPila.Name = "tabPila";
-            this.tabPila.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPila.Size = new System.Drawing.Size(877, 93);
-            this.tabPila.TabIndex = 0;
-            this.tabPila.Text = "Pila";
-            this.tabPila.UseVisualStyleBackColor = true;
-            // 
-            // tabCola
-            // 
-            this.tabCola.Controls.Add(this.dgCola);
-            this.tabCola.Controls.Add(this.btnEliminarcola);
-            this.tabCola.Controls.Add(this.btnReportecola);
-            this.tabCola.Location = new System.Drawing.Point(4, 25);
-            this.tabCola.Name = "tabCola";
-            this.tabCola.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCola.Size = new System.Drawing.Size(877, 93);
-            this.tabCola.TabIndex = 1;
-            this.tabCola.Text = "Cola";
-            this.tabCola.UseVisualStyleBackColor = true;
-            // 
-            // tabLista
-            // 
-            this.tabLista.Controls.Add(this.dgLista);
-            this.tabLista.Controls.Add(this.btnEliminarlista);
-            this.tabLista.Controls.Add(this.btnReportelista);
-            this.tabLista.Location = new System.Drawing.Point(4, 25);
-            this.tabLista.Name = "tabLista";
-            this.tabLista.Size = new System.Drawing.Size(877, 93);
-            this.tabLista.TabIndex = 2;
-            this.tabLista.Text = "Lista";
-            this.tabLista.UseVisualStyleBackColor = true;
-            // 
-            // dgPila
-            // 
-            this.dgPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPila.Location = new System.Drawing.Point(16, 6);
-            this.dgPila.Name = "dgPila";
-            this.dgPila.Size = new System.Drawing.Size(715, 84);
-            this.dgPila.TabIndex = 0;
-            // 
-            // btnReportepila
-            // 
-            this.btnReportepila.Location = new System.Drawing.Point(739, 6);
-            this.btnReportepila.Name = "btnReportepila";
-            this.btnReportepila.Size = new System.Drawing.Size(75, 23);
-            this.btnReportepila.TabIndex = 0;
-            this.btnReportepila.Text = "Reporte";
-            this.btnReportepila.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarpila
-            // 
-            this.btnEliminarpila.Location = new System.Drawing.Point(739, 52);
-            this.btnEliminarpila.Name = "btnEliminarpila";
-            this.btnEliminarpila.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarpila.TabIndex = 1;
-            this.btnEliminarpila.Text = "Eliminar";
-            this.btnEliminarpila.UseVisualStyleBackColor = true;
-            // 
-            // dgCola
-            // 
-            this.dgCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCola.Location = new System.Drawing.Point(6, 4);
-            this.dgCola.Name = "dgCola";
-            this.dgCola.Size = new System.Drawing.Size(718, 84);
-            this.dgCola.TabIndex = 2;
-            // 
-            // btnEliminarcola
-            // 
-            this.btnEliminarcola.Location = new System.Drawing.Point(767, 53);
-            this.btnEliminarcola.Name = "btnEliminarcola";
-            this.btnEliminarcola.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarcola.TabIndex = 4;
-            this.btnEliminarcola.Text = "Eliminar";
-            this.btnEliminarcola.UseVisualStyleBackColor = true;
-            // 
-            // btnReportecola
-            // 
-            this.btnReportecola.Location = new System.Drawing.Point(767, 7);
-            this.btnReportecola.Name = "btnReportecola";
-            this.btnReportecola.Size = new System.Drawing.Size(75, 23);
-            this.btnReportecola.TabIndex = 3;
-            this.btnReportecola.Text = "Reporte";
-            this.btnReportecola.UseVisualStyleBackColor = true;
-            // 
-            // dgLista
-            // 
-            this.dgLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLista.Location = new System.Drawing.Point(5, 4);
-            this.dgLista.Name = "dgLista";
-            this.dgLista.Size = new System.Drawing.Size(719, 84);
-            this.dgLista.TabIndex = 5;
-            // 
-            // btnEliminarlista
-            // 
-            this.btnEliminarlista.Location = new System.Drawing.Point(767, 53);
-            this.btnEliminarlista.Name = "btnEliminarlista";
-            this.btnEliminarlista.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarlista.TabIndex = 7;
-            this.btnEliminarlista.Text = "Eliminar";
-            this.btnEliminarlista.UseVisualStyleBackColor = true;
-            // 
-            // btnReportelista
-            // 
-            this.btnReportelista.Location = new System.Drawing.Point(767, 7);
-            this.btnReportelista.Name = "btnReportelista";
-            this.btnReportelista.Size = new System.Drawing.Size(75, 23);
-            this.btnReportelista.TabIndex = 6;
-            this.btnReportelista.Text = "Reporte";
-            this.btnReportelista.UseVisualStyleBackColor = true;
-            // 
             // frmIngresodatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,15 +518,15 @@
             this.Text = "ingresoDatos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.grpbtipoAtencion.ResumeLayout(false);
-            this.grpbtipoAtencion.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPila.ResumeLayout(false);
-            this.tabCola.ResumeLayout(false);
-            this.tabLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgPila)).EndInit();
+            this.tabCola.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgCola)).EndInit();
+            this.tabLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgLista)).EndInit();
+            this.grpbtipoAtencion.ResumeLayout(false);
+            this.grpbtipoAtencion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
