@@ -71,5 +71,10 @@ namespace WilliamAlvarezFase3Grupo108
             }
 
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
