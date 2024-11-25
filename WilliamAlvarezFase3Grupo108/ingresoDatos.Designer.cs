@@ -177,6 +177,7 @@
             this.txtedad.Name = "txtedad";
             this.txtedad.Size = new System.Drawing.Size(224, 24);
             this.txtedad.TabIndex = 17;
+            this.txtedad.TextChanged += new System.EventHandler(this.txtedad_TextChanged);
             // 
             // label10
             // 
@@ -193,6 +194,7 @@
             this.txtITipoidentificacion.Name = "txtITipoidentificacion";
             this.txtITipoidentificacion.Size = new System.Drawing.Size(224, 24);
             this.txtITipoidentificacion.TabIndex = 15;
+            this.txtITipoidentificacion.TextChanged += new System.EventHandler(this.txtITipoidentificacion_TextChanged);
             // 
             // grpbtipoAtencion
             // 
@@ -255,6 +257,13 @@
             // cmbEstrato
             // 
             this.cmbEstrato.FormattingEnabled = true;
+            this.cmbEstrato.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.cmbEstrato.Location = new System.Drawing.Point(186, 179);
             this.cmbEstrato.Name = "cmbEstrato";
             this.cmbEstrato.Size = new System.Drawing.Size(224, 24);
@@ -266,14 +275,21 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(224, 24);
             this.txtNombre.TabIndex = 8;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // cmbIdentificacion
             // 
             this.cmbIdentificacion.FormattingEnabled = true;
+            this.cmbIdentificacion.Items.AddRange(new object[] {
+            "CC",
+            "CE",
+            "NUIP",
+            "PAS"});
             this.cmbIdentificacion.Location = new System.Drawing.Point(186, 34);
             this.cmbIdentificacion.Name = "cmbIdentificacion";
             this.cmbIdentificacion.Size = new System.Drawing.Size(224, 24);
             this.cmbIdentificacion.TabIndex = 7;
+            this.cmbIdentificacion.SelectedIndexChanged += new System.EventHandler(this.cmbIdentificacion_SelectedIndexChanged);
             // 
             // label9
             // 
