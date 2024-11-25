@@ -322,6 +322,7 @@
             this.txtedad.Size = new System.Drawing.Size(224, 24);
             this.txtedad.TabIndex = 17;
             this.txtedad.TextChanged += new System.EventHandler(this.txtedad_TextChanged);
+            this.txtedad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedad_KeyPress);
             // 
             // label10
             // 
@@ -339,6 +340,7 @@
             this.txtINidentificacion.Size = new System.Drawing.Size(224, 24);
             this.txtINidentificacion.TabIndex = 15;
             this.txtINidentificacion.TextChanged += new System.EventHandler(this.txtITipoidentificacion_TextChanged);
+            this.txtINidentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtINidentificacion_KeyPress);
             // 
             // grpbtipoAtencion
             // 
@@ -350,6 +352,7 @@
             this.grpbtipoAtencion.TabIndex = 14;
             this.grpbtipoAtencion.TabStop = false;
             this.grpbtipoAtencion.Text = "Tipo de Atencion";
+            this.grpbtipoAtencion.Enter += new System.EventHandler(this.grpbtipoAtencion_Enter);
             // 
             // rtbnExameneslaboratorio
             // 
@@ -399,6 +402,7 @@
             this.txtValorcopago.Name = "txtValorcopago";
             this.txtValorcopago.Size = new System.Drawing.Size(224, 24);
             this.txtValorcopago.TabIndex = 10;
+            this.txtValorcopago.TextChanged += new System.EventHandler(this.txtValorcopago_TextChanged);
             // 
             // cmbEstrato
             // 
@@ -423,6 +427,7 @@
             this.txtNombre.Size = new System.Drawing.Size(224, 24);
             this.txtNombre.TabIndex = 8;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // cmbTipoidentificacion
             // 

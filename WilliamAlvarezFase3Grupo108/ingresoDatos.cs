@@ -33,10 +33,10 @@ namespace WilliamAlvarezFase3Grupo108
             // declaracion del metodo cargar ElementosIniciales
 
             cargarElementosIniciales();
-            
+
         }
         // crear metodo que no retorna nada de cargarElemenotsIniciales
-        public void cargarElementosIniciales() 
+        public void cargarElementosIniciales()
         {
 
             /* esto se hace para colocar en los 
@@ -150,7 +150,7 @@ namespace WilliamAlvarezFase3Grupo108
                 }
                 else if (this.rtbnExameneslaboratorio.Checked)
                 {
-                    this.tAtencion = "Exámenes de laboratorio";
+                    this.tAtencion = "Examenes de laboratorio";
                 }
             }
 
@@ -164,12 +164,87 @@ namespace WilliamAlvarezFase3Grupo108
             else
             {
                 // Asignar fecha de acceso si todo está validado
+                this.vcopago = calcularValorPagar().ToString(); // Cálculo corregido del copago
                 this.fechaAcceso = this.dtskAcceso.Value.ToString(); // Obtiene la fecha seleccionada
-                return true; // Retorna true indicando que la validación pasó
+                this.txtValorcopago.Text = this.vcopago;
+                return true; // Retorna true indicando que la validación pasó 
+
+                
+
             }
         }
 
-         
+
+        // Creamos un metodo para calcular el copago
+
+        public int calcularValorPagar()
+        {
+            int intValorPagar = 0;
+             
+
+            if (this.tAtencion =="Medicina General")
+            {
+                switch (this.estrato)
+                {
+                    case "1":
+                        intValorPagar = 0;
+                        break;
+                    case "2":
+                        intValorPagar = 0;
+                        break;
+                    case "3":
+                        intValorPagar = 10000;
+                        break;
+                    case "4":
+                        intValorPagar = 15000;
+                        break;
+                    case "5":
+                        intValorPagar = 20000;
+                        break;
+                    case "6":
+                        intValorPagar = 30000;
+                        break;
+
+
+                }
+
+
+                return intValorPagar;
+            }
+
+            if (this.tAtencion=="Examenes de laboratorio")
+            {
+                switch (this.estrato)
+                {
+                    case "1":
+                        intValorPagar = 0;
+                        break;
+                    case "2":
+                        intValorPagar = 0;
+                        break;
+                    case "3":
+                        intValorPagar = 0;
+                        break;
+                    case "4":
+                        intValorPagar = 5000;
+                        break;
+                    case "5":
+                        intValorPagar = 10000;
+                        break;
+                    case "6":
+                        intValorPagar = 20000;
+                        break;
+
+
+                }
+
+            }
+
+            return intValorPagar;
+        }
+
+
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -184,45 +259,17 @@ namespace WilliamAlvarezFase3Grupo108
 
         private void txtITipoidentificacion_TextChanged(object sender, EventArgs e)
         {
-            // Esta línea verifica si el texto en el TextBox no es un número
-            if (!long.TryParse(txtINidentificacion.Text, out _))
-            {
-                // Si no es un número, muestra un mensaje en una ventana emergente
-                MessageBox.Show("Solo puede ingresar números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                // Luego limpia el contenido del TextBox para que el usuario vea que no se aceptaron otros caracteres.
-                txtINidentificacion.Text = "";
-
-
-
-
-            }
+         
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            // Esta línea verifica si el texto en el TextBox contiene caracteres que no sean letras o espacios
-            if (txtNombre.Text.Any(c => !char.IsLetter(c) && c != ' '))
-            {
-                // Si el texto contiene caracteres no permitidos (que no sean letras ni espacio), muestra un mensaje
-                MessageBox.Show("Solo puede ingresar letras y espacios.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                // Luego limpia el contenido del TextBox para que el usuario vea que no se aceptaron otros caracteres
-                txtNombre.Clear();  // Usamos Clear() para limpiar el TextBox
-            }
+           
         }
 
         private void txtedad_TextChanged(object sender, EventArgs e)
         {
-            // Verifica si el texto ingresado es un número y está en el rango de 10 a 99
-            if (!int.TryParse(txtedad.Text, out int edad) || edad < 1 || edad >= 99)
-            {
-                // Si no es un número o no está en el rango, muestra un mensaje
-                MessageBox.Show("Solo puede ingresar una edad entre 1 y 99.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                // Luego limpia el contenido del TextBox
-                txtedad.Text = "";
-            }
+           
 
         }
 
@@ -232,17 +279,17 @@ namespace WilliamAlvarezFase3Grupo108
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
-            
-            /*pregunta si desea salir de la aplicacion si es si */
+
+        /*pregunta si desea salir de la aplicacion si es si */
         {
-            if (MessageBox.Show("Desea salir de la aplicacion?","Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) 
-            { 
+            if (MessageBox.Show("Desea salir de la aplicacion?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
 
                 // salir de la aplicacion encaso de que sea si
                 Application.Exit();
 
 
-            
+
             }
         }
 
@@ -250,17 +297,54 @@ namespace WilliamAlvarezFase3Grupo108
         {
             if (validarFormulario())
             {
-                
-            
-            
+
+                MessageBox.Show("Datos registrados correctamente.");
+
             }
 
 
+        }
+
+        private void txtINidentificacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Solo se permiten números en la identificación", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;  // Evita que el carácter no válido se ingrese
+            }
+        }
 
 
-               
-            
+        private void txtedad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si el carácter presionado es una letra o una tecla de control (como retroceso)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Solo se permiten letras en el nombre.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;  // Evita que el carácter no válido se ingrese
+            }
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite letras y espacios, pero bloquea otros caracteres
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Solo se permiten letras y espacios en el nombre.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;  // Evita que el carácter no válido se ingrese
+            }
+        }
+
+        private void txtValorcopago_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpbtipoAtencion_Enter(object sender, EventArgs e)
+        {
 
         }
     }
 }
+
