@@ -16,10 +16,10 @@ namespace WilliamAlvarezFase3Grupo108
         /* 1 declaracion de variable constante 
          declaracion de manejador de errores */
 
-        private const string password = "";
+        public const string password = "unad";
         private ErrorProvider error;
         public frmIniciarsesion()
-        {
+        { 
             InitializeComponent();
 
             /* 2 inicializacion en el constructor
@@ -54,7 +54,7 @@ namespace WilliamAlvarezFase3Grupo108
             else
 
             {
-                if (!password.Equals(password))
+                if (!password.Equals("unad"))
                 {
                     this.error.SetError(this.txtPassword, "la clave ingresada no es valida ");
 

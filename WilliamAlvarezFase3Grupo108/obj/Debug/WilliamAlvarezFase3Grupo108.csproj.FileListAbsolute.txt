@@ -7,5 +7,5 @@ C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grup
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.exe
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.pdb
-C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.ingresoDatos.resources
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.frmIniciarsesion.resources
+C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.frmIngresodatos.resources

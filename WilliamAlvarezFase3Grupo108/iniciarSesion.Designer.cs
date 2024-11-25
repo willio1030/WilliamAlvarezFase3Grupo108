@@ -38,7 +38,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.itmMenuacercaDe = new System.Windows.Forms.ToolStripMenuItem();
-            this.iniciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itmMenuiniciarSesion = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,7 +120,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itmMenuacercaDe,
-            this.iniciarSesionToolStripMenuItem});
+            this.itmMenuiniciarSesion});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -134,12 +134,12 @@
             this.itmMenuacercaDe.Text = "Acerca de";
             this.itmMenuacercaDe.Click += new System.EventHandler(this.itemMenuacercaDe_Click);
             // 
-            // iniciarSesionToolStripMenuItem
+            // itmMenuiniciarSesion
             // 
-            this.iniciarSesionToolStripMenuItem.Name = "iniciarSesionToolStripMenuItem";
-            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
-            this.iniciarSesionToolStripMenuItem.Text = "itmMenuiniciarSesion";
-            this.iniciarSesionToolStripMenuItem.Click += new System.EventHandler(this.iniciarSesionToolStripMenuItem_Click);
+            this.itmMenuiniciarSesion.Name = "itmMenuiniciarSesion";
+            this.itmMenuiniciarSesion.Size = new System.Drawing.Size(87, 20);
+            this.itmMenuiniciarSesion.Text = "Iniciar sesion";
+            this.itmMenuiniciarSesion.Click += new System.EventHandler(this.iniciarSesionToolStripMenuItem_Click);
             // 
             // frmIniciarsesion
             // 
@@ -176,7 +176,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem itmMenuacercaDe;
-        private System.Windows.Forms.ToolStripMenuItem iniciarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itmMenuiniciarSesion;
     }
 }
 
