@@ -45,7 +45,7 @@
             this.rtbnmedicinaGeneral = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.txtReportedatos = new System.Windows.Forms.TextBox();
-            this.txtValorpago = new System.Windows.Forms.TextBox();
+            this.txtValorcopago = new System.Windows.Forms.TextBox();
             this.cmbEstrato = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cmbIdentificacion = new System.Windows.Forms.ComboBox();
@@ -78,7 +78,7 @@
             this.groupBox1.Controls.Add(this.grpbtipoAtencion);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtReportedatos);
-            this.groupBox1.Controls.Add(this.txtValorpago);
+            this.groupBox1.Controls.Add(this.txtValorcopago);
             this.groupBox1.Controls.Add(this.cmbEstrato);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.cmbIdentificacion);
@@ -247,12 +247,12 @@
             this.txtReportedatos.Size = new System.Drawing.Size(224, 24);
             this.txtReportedatos.TabIndex = 12;
             // 
-            // txtValorpago
+            // txtValorcopago
             // 
-            this.txtValorpago.Location = new System.Drawing.Point(186, 256);
-            this.txtValorpago.Name = "txtValorpago";
-            this.txtValorpago.Size = new System.Drawing.Size(224, 24);
-            this.txtValorpago.TabIndex = 10;
+            this.txtValorcopago.Location = new System.Drawing.Point(186, 256);
+            this.txtValorcopago.Name = "txtValorcopago";
+            this.txtValorcopago.Size = new System.Drawing.Size(224, 24);
+            this.txtValorcopago.TabIndex = 10;
             // 
             // cmbEstrato
             // 
@@ -395,7 +395,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtValorpago;
+        private System.Windows.Forms.TextBox txtValorcopago;
         private System.Windows.Forms.ComboBox cmbEstrato;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cmbIdentificacion;
