@@ -1,6 +1,6 @@
 ﻿namespace WilliamAlvarezFase3Grupo108
 {
-    partial class Form1
+    partial class frmIniciarsesion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIniciarsesion));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,7 +37,7 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.itemMenuacercaDe = new System.Windows.Forms.ToolStripMenuItem();
+            this.itmMenuacercaDe = new System.Windows.Forms.ToolStripMenuItem();
             this.iniciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -119,7 +119,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemMenuacercaDe,
+            this.itmMenuacercaDe,
             this.iniciarSesionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -127,21 +127,21 @@
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // itemMenuacercaDe
+            // itmMenuacercaDe
             // 
-            this.itemMenuacercaDe.Name = "itemMenuacercaDe";
-            this.itemMenuacercaDe.Size = new System.Drawing.Size(71, 20);
-            this.itemMenuacercaDe.Text = "Acerca de";
-            this.itemMenuacercaDe.Click += new System.EventHandler(this.itemMenuacercaDe_Click);
+            this.itmMenuacercaDe.Name = "itmMenuacercaDe";
+            this.itmMenuacercaDe.Size = new System.Drawing.Size(71, 20);
+            this.itmMenuacercaDe.Text = "Acerca de";
+            this.itmMenuacercaDe.Click += new System.EventHandler(this.itemMenuacercaDe_Click);
             // 
             // iniciarSesionToolStripMenuItem
             // 
             this.iniciarSesionToolStripMenuItem.Name = "iniciarSesionToolStripMenuItem";
-            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.iniciarSesionToolStripMenuItem.Text = "Iniciar Sesion";
+            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.iniciarSesionToolStripMenuItem.Text = "itmMenuiniciarSesion";
             this.iniciarSesionToolStripMenuItem.Click += new System.EventHandler(this.iniciarSesionToolStripMenuItem_Click);
             // 
-            // Form1
+            // frmIniciarsesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +155,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "frmIniciarsesion";
             this.Text = "Iniciar Sesion";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem itemMenuacercaDe;
+        private System.Windows.Forms.ToolStripMenuItem itmMenuacercaDe;
         private System.Windows.Forms.ToolStripMenuItem iniciarSesionToolStripMenuItem;
     }
 }

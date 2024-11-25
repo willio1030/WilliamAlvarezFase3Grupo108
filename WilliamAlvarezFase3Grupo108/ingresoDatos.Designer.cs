@@ -1,6 +1,6 @@
 ﻿namespace WilliamAlvarezFase3Grupo108
 {
-    partial class ingresoDatos
+    partial class frmIngresodatos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmbTipoestructura = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -56,10 +57,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            this.grpbtipoAtencion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grpbtipoAtencion.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -96,6 +96,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 458);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(830, 106);
+            this.dataGridView1.TabIndex = 25;
             // 
             // cmbTipoestructura
             // 
@@ -341,15 +349,7 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "EPS Salvando Vidas";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 458);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(830, 106);
-            this.dataGridView1.TabIndex = 25;
-            // 
-            // ingresoDatos
+            // frmIngresodatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -357,13 +357,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ingresoDatos";
+            this.Name = "frmIngresodatos";
             this.Text = "ingresoDatos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grpbtipoAtencion.ResumeLayout(false);
             this.grpbtipoAtencion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

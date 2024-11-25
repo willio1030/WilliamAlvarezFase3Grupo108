@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WilliamAlvarezFase3Grupo108
 {
-    public partial class ingresoDatos : Form
+    public partial class frmIngresodatos : Form
     {
-        public ingresoDatos()
+        public frmIngresodatos()
         {
             InitializeComponent();
         }

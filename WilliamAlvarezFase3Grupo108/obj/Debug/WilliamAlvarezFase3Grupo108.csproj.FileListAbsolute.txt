@@ -2,10 +2,10 @@ C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grup
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\bin\Debug\WilliamAlvarezFase3Grupo108.exe
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\bin\Debug\WilliamAlvarezFase3Grupo108.pdb
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.csproj.AssemblyReference.cache
-C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.Form1.resources
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.Properties.Resources.resources
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.csproj.GenerateResource.cache
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.exe
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.pdb
 C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.ingresoDatos.resources
+C:\Users\LENOVO\source\repos\WilliamAlvarezFase3Grupo108\WilliamAlvarezFase3Grupo108\obj\Debug\WilliamAlvarezFase3Grupo108.frmIniciarsesion.resources
