@@ -51,7 +51,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtedad = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtITipoidentificacion = new System.Windows.Forms.TextBox();
+            this.txtINidentificacion = new System.Windows.Forms.TextBox();
             this.grpbtipoAtencion = new System.Windows.Forms.GroupBox();
             this.rtbnExameneslaboratorio = new System.Windows.Forms.RadioButton();
             this.rtbnmedicinaGeneral = new System.Windows.Forms.RadioButton();
@@ -60,7 +60,7 @@
             this.txtValorcopago = new System.Windows.Forms.TextBox();
             this.cmbEstrato = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.cmbIdentificacion = new System.Windows.Forms.ComboBox();
+            this.cmbTipoidentificacion = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -92,14 +92,14 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtedad);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.txtITipoidentificacion);
+            this.groupBox1.Controls.Add(this.txtINidentificacion);
             this.groupBox1.Controls.Add(this.grpbtipoAtencion);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtReportedatos);
             this.groupBox1.Controls.Add(this.txtValorcopago);
             this.groupBox1.Controls.Add(this.cmbEstrato);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.cmbIdentificacion);
+            this.groupBox1.Controls.Add(this.cmbTipoidentificacion);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -246,6 +246,10 @@
             // cmbTipoestructura
             // 
             this.cmbTipoestructura.FormattingEnabled = true;
+            this.cmbTipoestructura.Items.AddRange(new object[] {
+            "Pila",
+            "Cola",
+            "Lista"});
             this.cmbTipoestructura.Location = new System.Drawing.Point(186, 328);
             this.cmbTipoestructura.Name = "cmbTipoestructura";
             this.cmbTipoestructura.Size = new System.Drawing.Size(224, 24);
@@ -271,6 +275,7 @@
             this.btnSalir.TabIndex = 22;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnLimpiar
             // 
@@ -291,6 +296,7 @@
             this.btnRegistrar.TabIndex = 20;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dtskAcceso
             // 
@@ -326,13 +332,13 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "* Edad:";
             // 
-            // txtITipoidentificacion
+            // txtINidentificacion
             // 
-            this.txtITipoidentificacion.Location = new System.Drawing.Point(650, 32);
-            this.txtITipoidentificacion.Name = "txtITipoidentificacion";
-            this.txtITipoidentificacion.Size = new System.Drawing.Size(224, 24);
-            this.txtITipoidentificacion.TabIndex = 15;
-            this.txtITipoidentificacion.TextChanged += new System.EventHandler(this.txtITipoidentificacion_TextChanged);
+            this.txtINidentificacion.Location = new System.Drawing.Point(650, 32);
+            this.txtINidentificacion.Name = "txtINidentificacion";
+            this.txtINidentificacion.Size = new System.Drawing.Size(224, 24);
+            this.txtINidentificacion.TabIndex = 15;
+            this.txtINidentificacion.TextChanged += new System.EventHandler(this.txtITipoidentificacion_TextChanged);
             // 
             // grpbtipoAtencion
             // 
@@ -418,19 +424,19 @@
             this.txtNombre.TabIndex = 8;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
-            // cmbIdentificacion
+            // cmbTipoidentificacion
             // 
-            this.cmbIdentificacion.FormattingEnabled = true;
-            this.cmbIdentificacion.Items.AddRange(new object[] {
+            this.cmbTipoidentificacion.FormattingEnabled = true;
+            this.cmbTipoidentificacion.Items.AddRange(new object[] {
             "CC",
             "CE",
             "NUIP",
             "PAS"});
-            this.cmbIdentificacion.Location = new System.Drawing.Point(186, 34);
-            this.cmbIdentificacion.Name = "cmbIdentificacion";
-            this.cmbIdentificacion.Size = new System.Drawing.Size(224, 24);
-            this.cmbIdentificacion.TabIndex = 7;
-            this.cmbIdentificacion.SelectedIndexChanged += new System.EventHandler(this.cmbIdentificacion_SelectedIndexChanged);
+            this.cmbTipoidentificacion.Location = new System.Drawing.Point(186, 34);
+            this.cmbTipoidentificacion.Name = "cmbTipoidentificacion";
+            this.cmbTipoidentificacion.Size = new System.Drawing.Size(224, 24);
+            this.cmbTipoidentificacion.TabIndex = 7;
+            this.cmbTipoidentificacion.SelectedIndexChanged += new System.EventHandler(this.cmbIdentificacion_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -545,9 +551,9 @@
         private System.Windows.Forms.TextBox txtValorcopago;
         private System.Windows.Forms.ComboBox cmbEstrato;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.ComboBox cmbIdentificacion;
+        private System.Windows.Forms.ComboBox cmbTipoidentificacion;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtITipoidentificacion;
+        private System.Windows.Forms.TextBox txtINidentificacion;
         private System.Windows.Forms.GroupBox grpbtipoAtencion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtReportedatos;
