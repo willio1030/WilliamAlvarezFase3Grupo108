@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\williamalvarezfase3grupo108\\ingresodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|solutionrelative:williamalvarezfase3grupo108\\ingresodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|c:\\users\\lenovo\\source\\repos\\williamalvarezfase3grupo108\\williamalvarezfase3grupo108\\ingresodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|solutionrelative:williamalvarezfase3grupo108\\ingresodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\williamalvarezfase3grupo108\\ingresodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|solutionrelative:williamalvarezfase3grupo108\\ingresodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|c:\\users\\lenovo\\source\\repos\\williamalvarezfase3grupo108\\williamalvarezfase3grupo108\\iniciarsesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|solutionrelative:williamalvarezfase3grupo108\\iniciarsesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87A3F43D-3188-4747-9DE5-FDE0C0E07FED}|WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108.csproj|C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\williamalvarezfase3grupo108\\iniciarsesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 332,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +42,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "iniciarSesion.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\iniciarSesion.cs",
+              "RelativeDocumentMoniker": "WilliamAlvarezFase3Grupo108\\iniciarSesion.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\iniciarSesion.cs",
+              "RelativeToolTip": "WilliamAlvarezFase3Grupo108\\iniciarSesion.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAxwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T21:12:35.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ingresoDatos.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\ingresoDatos.cs",
               "RelativeDocumentMoniker": "WilliamAlvarezFase3Grupo108\\ingresoDatos.cs",
               "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\ingresoDatos.cs",
               "RelativeToolTip": "WilliamAlvarezFase3Grupo108\\ingresoDatos.cs",
-              "ViewState": "AgIAABUCAAAAAAAAAAAywB0CAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAFkCAAAAAAAAAAAxwHgCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T17:18:57.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ingresoDatos.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\ingresoDatos.cs",
               "RelativeDocumentMoniker": "WilliamAlvarezFase3Grupo108\\ingresoDatos.cs",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "iniciarSesion.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\iniciarSesion.cs",
               "RelativeDocumentMoniker": "WilliamAlvarezFase3Grupo108\\iniciarSesion.cs",
@@ -75,16 +92,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "estructuraDatosusuario.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\estructuraDatosusuario.cs",
               "RelativeDocumentMoniker": "WilliamAlvarezFase3Grupo108\\estructuraDatosusuario.cs",
               "ToolTip": "C:\\Users\\LENOVO\\source\\repos\\WilliamAlvarezFase3Grupo108\\WilliamAlvarezFase3Grupo108\\estructuraDatosusuario.cs",
               "RelativeToolTip": "WilliamAlvarezFase3Grupo108\\estructuraDatosusuario.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T04:28:30.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T04:28:30.725Z"
             }
           ]
         },

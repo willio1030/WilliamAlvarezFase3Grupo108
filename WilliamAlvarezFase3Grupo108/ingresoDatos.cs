@@ -569,7 +569,64 @@ namespace WilliamAlvarezFase3Grupo108
             }
 
         }
+        private estructuraDatosusuario obtenerCliente(string nIdentificacion)
+        {
+            // Utiliza LINQ para encontrar el elemento de forma más concisa
+            return Lista.FirstOrDefault(cliente => cliente.nIdentificacion == nIdentificacion);
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // Limpiar los TextBox
+            txtINidentificacion.Text = "";
+            txtNombre.Text = "";
+            txtedad.Text = "";
+            // ... y así con todos los demás TextBox
+
+            // Limpiar los ComboBox
+            cmbTipoidentificacion.SelectedIndex = -1;
+            cmbEstrato.SelectedIndex = -1;
+            cmbTipoestructura.SelectedIndex = -1;
+
+            // Limpiar los RadioButton
+            rtbnmedicinaGeneral.Checked = false;
+            rtbnExameneslaboratorio.Checked = false;
+
+            // Limpiar el DatePicker
+            dtskAcceso.Value = DateTime.Now; // O cualquier fecha por defecto que prefieras
+
+            // Limpiar el TextBox de reporte
+            txtReportedatos.Text = "";
+
+
+
+        }
+        private List<estructuraDatosusuario> Buscar(IEnumerable<estructuraDatosusuario> estructura, string nIdentificacion)
+        {
+            return estructura.Where(x => x.nIdentificacion == nIdentificacion).ToList();
+        }
+
+        private void btnBuscarPila_Click(object sender, EventArgs e)
+        {
+            string nIdentificacionABuscar = txtINidentificacion.Text;
+            var resultados = Buscar(Pila, nIdentificacionABuscar);
+            dgPila.DataSource = resultados;
+            // ... Mostrar mensaje si no se encuentran resultados
+        }
+
+        private void btnBuscarCola_Click(object sender, EventArgs e)
+        {
+            // ... (similar al anterior, pero usando Cola)
+        }
+
+        private void btnBuscarLista_Click(object sender, EventArgs e)
+        {
+            // ... (similar al anterior, pero usando Lista)
+        }
     }
 }
+
+
+
 
 
