@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabEstructuras = new System.Windows.Forms.TabControl();
             this.tabPila = new System.Windows.Forms.TabPage();
             this.dgPila = new System.Windows.Forms.DataGridView();
             this.btnEliminarpila = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabEstructuras.SuspendLayout();
             this.tabPila.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPila)).BeginInit();
             this.tabCola.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tabControl1);
+            this.groupBox1.Controls.Add(this.tabEstructuras);
             this.groupBox1.Controls.Add(this.cmbTipoestructura);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.btnSalir);
@@ -115,17 +115,17 @@
             this.groupBox1.Text = "Datos del Usuario";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // tabControl1
+            // tabEstructuras
             // 
-            this.tabControl1.Controls.Add(this.tabPila);
-            this.tabControl1.Controls.Add(this.tabCola);
-            this.tabControl1.Controls.Add(this.tabLista);
-            this.tabControl1.Location = new System.Drawing.Point(0, 443);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(885, 122);
-            this.tabControl1.TabIndex = 25;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabEstructuras.Controls.Add(this.tabPila);
+            this.tabEstructuras.Controls.Add(this.tabCola);
+            this.tabEstructuras.Controls.Add(this.tabLista);
+            this.tabEstructuras.Location = new System.Drawing.Point(0, 443);
+            this.tabEstructuras.Name = "tabEstructuras";
+            this.tabEstructuras.SelectedIndex = 0;
+            this.tabEstructuras.Size = new System.Drawing.Size(885, 122);
+            this.tabEstructuras.TabIndex = 25;
+            this.tabEstructuras.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPila
             // 
@@ -529,7 +529,7 @@
             this.Text = "ingresoDatos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabEstructuras.ResumeLayout(false);
             this.tabPila.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgPila)).EndInit();
             this.tabCola.ResumeLayout(false);
@@ -573,7 +573,7 @@
         private System.Windows.Forms.RadioButton rtbnmedicinaGeneral;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmbTipoestructura;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabEstructuras;
         private System.Windows.Forms.TabPage tabPila;
         private System.Windows.Forms.TabPage tabCola;
         private System.Windows.Forms.TabPage tabLista;

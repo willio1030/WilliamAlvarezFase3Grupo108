@@ -23,7 +23,9 @@ namespace WilliamAlvarezFase3Grupo108
         private string vcopago;
         private string fechaAcceso;
         private string tEstructura;
-        private string rDatos;
+       // private string reporteDatos;
+
+        Stack<estructuraDatosusuario> pila = new Stack<estructuraDatosusuario>();    
 
 
 
@@ -104,19 +106,25 @@ namespace WilliamAlvarezFase3Grupo108
             }
 
             // Validar el campo "Número de Identificación"
-            if (string.IsNullOrEmpty(this.txtINidentificacion.Text.Trim())) // Valida el texto del TextBox
+            this.nIdentificacion = this.txtedad.Text.Trim();
+
+            if (string.IsNullOrEmpty(this.nIdentificacion)) // Valida el texto del TextBox
             {
                 mensajeValidacion += "- Número de identificación\n"; // Agrega mensaje de error
             }
 
             // Validar el campo "Nombre Completo"
-            if (string.IsNullOrEmpty(this.txtNombre.Text.Trim())) // Valida el texto del TextBox
+
+            this.nombre = this.txtNombre.Text.Trim();
+            if (string.IsNullOrEmpty(this.nombre)) // Valida el texto del TextBox
             {
                 mensajeValidacion += "- Nombre Completo\n"; // Agrega mensaje de error
             }
-
             // Validar el campo "Edad"
-            if (string.IsNullOrEmpty(this.txtedad.Text.Trim())) // Valida el texto del TextBox
+
+            this.edad = this.txtedad.Text.Trim();
+
+            if (string.IsNullOrEmpty(this.edad)) // Valida el texto del TextBox
             {
                 mensajeValidacion += "- Edad\n"; // Agrega mensaje de error
             }
@@ -298,9 +306,38 @@ namespace WilliamAlvarezFase3Grupo108
             if (validarFormulario())
             {
 
-                MessageBox.Show("Datos registrados correctamente.");
+                /*traer la informacion de los atributos de clase 
+                 que son recuperados del formulario ahora los vamos 
+                a montarlo en la clase DTO estructuraDatosusuario*/
+
+                estructuraDatosusuario miEstructura = new estructuraDatosusuario();
+                miEstructura.tIdentificacion = this.tIdentificacion;
+                miEstructura.nIdentificacion = this.nIdentificacion;
+                miEstructura.nombre = this.nombre;
+                miEstructura.edad =int.Parse (this.edad);
+                miEstructura.estrato=int.Parse (this.estrato);
+                miEstructura.tAtencion= this.tAtencion;
+                miEstructura.vCopago = int.Parse(this.vcopago);
+                miEstructura.fechaAcceso = this.fechaAcceso;
+
+                if (this.tEstructura.Equals("Pila")) 
+
+                {
+                    this.pila.Push (miEstructura);
+
+                    // como se refleja en el dataGribView
+                    dgPila.DataSource = null;
+                    dgPila.DataSource= this.pila.ToArray();
+                    MessageBox.Show("el registro fue agregado a la pila ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+
+
 
             }
+
+
 
 
         }

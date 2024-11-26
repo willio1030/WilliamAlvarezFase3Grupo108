@@ -9,15 +9,20 @@ namespace WilliamAlvarezFase3Grupo108
      class estructuraDatosusuario
     {
         // Variables de la clase
-        public string TipoIdentificacion { get; set; }
-        public string NumeroIdentificacion { get; set; }
-        public string NombreCompleto { get; set; }
-        public int Edad { get; set; }
-        public int Estrato { get; set; }
-        public string TipoAtencion { get; set; }
-        public decimal ValorCopago { get; set; }
-        public DateTime FechaRegistro { get; set; }
+        public string tIdentificacion { get; set; }
+        public string nIdentificacion{ get; set; }
+        public string nombre { get; set; }
+        public int edad { get; set; }
+        public int estrato { get; set; }
+        public string tAtencion { get; set; }
+        public int vCopago { get; set; }
+        public string fechaAcceso { get; set; }
 
+        public string tEstructura {  get; set; }
+
+
+       
+     
 
 
 
