@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WilliamAlvarezFase3Grupo108
@@ -23,17 +16,23 @@ namespace WilliamAlvarezFase3Grupo108
         private string vcopago;
         private string fechaAcceso;
         private string tEstructura;
+        // private string reporteDatos;
+
+
+        // inicializacion de variables para lista cola y pila
+
+        Stack<estructuraDatosusuario> Pila = new Stack<estructuraDatosusuario>();
+        Queue<estructuraDatosusuario> Cola = new Queue<estructuraDatosusuario>();
+        List<estructuraDatosusuario> Lista = new List<estructuraDatosusuario>();
+
 
         // variables de control para el reporte de los datos
 
-        private int intReportepila;
-        private int intReportecola;
-        private int intreportelista;
-       // private string reporteDatos;
+        private int intReporDatostepila;
+        private int intReporteDatoscola;
+        private int intreporteDatoslista;
 
-        Stack<estructuraDatosusuario> pila = new Stack<estructuraDatosusuario>();    
-        Queue<estructuraDatosusuario> Cola = new Queue<estructuraDatosusuario>();
-        List<estructuraDatosusuario> Lista = new List<estructuraDatosusuario>();
+
 
         public frmIngresodatos()
         {
@@ -43,9 +42,9 @@ namespace WilliamAlvarezFase3Grupo108
             cargarElementosIniciales();
             // inicializacion variables que capturan el reporte 
 
-            this.intreportelista = 0;
-            this.intReportecola = 0;
-            this.intreportelista = 0;
+            this.intreporteDatoslista = 0;
+            this.intReporteDatoscola = 0;
+            this.intreporteDatoslista = 0;
 
             //desabilitar botones reporte pila cola y lista
 
@@ -57,7 +56,7 @@ namespace WilliamAlvarezFase3Grupo108
 
             this.btnEliminarpila.Enabled = false;
             this.btnEliminarcola.Enabled = false;
-            this.btnEliminarlista.Enabled = false; 
+            this.btnEliminarlista.Enabled = false;
 
 
 
@@ -202,7 +201,7 @@ namespace WilliamAlvarezFase3Grupo108
                 this.txtValorcopago.Text = this.vcopago;
                 return true; // Retorna true indicando que la validación pasó 
 
-                
+
 
             }
         }
@@ -213,9 +212,9 @@ namespace WilliamAlvarezFase3Grupo108
         public int calcularValorPagar()
         {
             int intValorPagar = 0;
-             
 
-            if (this.tAtencion =="Medicina General")
+
+            if (this.tAtencion == "Medicina General")
             {
                 switch (this.estrato)
                 {
@@ -245,7 +244,7 @@ namespace WilliamAlvarezFase3Grupo108
                 return intValorPagar;
             }
 
-            if (this.tAtencion=="Examenes de laboratorio")
+            if (this.tAtencion == "Examenes de laboratorio")
             {
                 switch (this.estrato)
                 {
@@ -292,17 +291,17 @@ namespace WilliamAlvarezFase3Grupo108
 
         private void txtITipoidentificacion_TextChanged(object sender, EventArgs e)
         {
-         
+
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtedad_TextChanged(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -339,21 +338,25 @@ namespace WilliamAlvarezFase3Grupo108
                 miEstructura.tIdentificacion = this.tIdentificacion;
                 miEstructura.nIdentificacion = this.nIdentificacion;
                 miEstructura.nombre = this.nombre;
-                miEstructura.edad =int.Parse (this.edad);
-                miEstructura.estrato=int.Parse (this.estrato);
-                miEstructura.tAtencion= this.tAtencion;
+                miEstructura.edad = int.Parse(this.edad);
+                miEstructura.estrato = int.Parse(this.estrato);
+                miEstructura.tAtencion = this.tAtencion;
                 miEstructura.vCopago = int.Parse(this.vcopago);
                 miEstructura.fechaAcceso = this.fechaAcceso;
                 miEstructura.tEstructura = this.tEstructura;
 
-                if (this.tEstructura.Equals("Pila")) 
+                if (this.tEstructura.Equals("Pila"))
 
                 {
-                    this.pila.Push (miEstructura);
+
+                    /*sumar los valores de la pila cada vez que se ingres un dato*/
+
+                    this.intReporDatostepila = this.intReporDatostepila + int.Parse(this.vcopago);
+                    this.Pila.Push(miEstructura);
 
                     // como se refleja en el dataGribView
                     dgPila.DataSource = null;
-                    dgPila.DataSource= this.pila.ToArray();
+                    dgPila.DataSource = this.Pila.ToArray();
                     this.tabEstructuras.SelectedIndex = 0;
                     MessageBox.Show("el registro fue agregado a la pila ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.btnReportepila.Enabled = true;
@@ -375,7 +378,7 @@ namespace WilliamAlvarezFase3Grupo108
                     MessageBox.Show("el registro fue agregado a la cola ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.btnReportecola.Enabled = true;
                     this.btnEliminarcola.Enabled = true;
-                    
+
                 }
 
                 if (this.tEstructura.Equals("Lista"))
@@ -443,6 +446,130 @@ namespace WilliamAlvarezFase3Grupo108
         {
 
         }
+
+        private void btnReportepila_Click(object sender, EventArgs e)
+
+
+        {
+            if (Pila.Count > 0)
+            {
+                int sumaCopagos = Pila.Sum(p => p.vCopago);
+                txtReportedatos.Text = $" {sumaCopagos}";
+            }
+            else
+            {
+                MessageBox.Show("La pila está vacía.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+
+
+
+
+        private void txtReportedatos_TextChanged(object sender, EventArgs e)
+        {
+
+            {
+
+            }
+
+
+        }
+
+        private void btnReportecola_Click(object sender, EventArgs e)
+        {
+            // Verificamos si la cola está vacía antes de contar los elementos
+            if (Cola.Count > 0)
+            {
+                // Contamos los elementos de la cola
+                int cantidadRegistros = Cola.Count;
+
+                // Actualizamos el TextBox txtReportedatos.Text
+                txtReportedatos.Text = $" {cantidadRegistros}";
+            }
+            else
+            {
+                txtReportedatos.Text = "La cola está vacía.";
+            }
+        }
+
+        private void btnReportelista_Click(object sender, EventArgs e)
+        {
+            // Verificamos si la lista está vacía antes de calcular el promedio
+            if (Lista.Count > 0)
+            {
+                // Calculamos el promedio de las edades utilizando LINQ
+                double promedioEdades = Lista.Average(l => l.edad);
+
+                // Actualizamos el TextBox txtReportedatos.Text
+                txtReportedatos.Text = $" {promedioEdades}";
+            }
+            else
+            {
+                txtReportedatos.Text = "La lista está vacía.";
+            }
+        }
+
+        private void btnEliminarpila_Click(object sender, EventArgs e)
+        {
+            if (Pila.Count > 0)
+            {
+                // Eliminamos el elemento superior de la pila
+                Pila.Pop();
+
+                // Actualizamos el DataGridView de la pila
+                dgPila.DataSource = null;
+                dgPila.DataSource = Pila.ToArray();
+
+                // Mostrar un mensaje de confirmación (opcional)
+                MessageBox.Show("Elemento eliminado de la pila.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("La pila está vacía.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void btnEliminarcola_Click(object sender, EventArgs e)
+        {
+            if (Cola.Count > 0)
+            {
+                // Eliminamos el primer elemento de la cola
+                Cola.Dequeue();
+
+                // Actualizamos el DataGridView de la cola
+                dgCola.DataSource = null;
+                dgCola.DataSource = Cola.ToArray();
+
+                MessageBox.Show("Elemento eliminado de la cola.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("La cola está vacía.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+
+        }
+
+        private void btnEliminarlista_Click(object sender, EventArgs e)
+        {
+            if (Lista.Count > 0)
+            {
+                Lista.RemoveAt(Lista.Count - 1); // Elimina el último elemento
+                dgLista.DataSource = null;
+                dgLista.DataSource = Lista.ToArray();
+                MessageBox.Show("Último elemento eliminado de la lista.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("La lista está vacía.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }
+
 

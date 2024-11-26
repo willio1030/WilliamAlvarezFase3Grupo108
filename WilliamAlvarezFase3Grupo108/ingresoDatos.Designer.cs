@@ -156,6 +156,7 @@
             this.btnEliminarpila.TabIndex = 1;
             this.btnEliminarpila.Text = "Eliminar";
             this.btnEliminarpila.UseVisualStyleBackColor = true;
+            this.btnEliminarpila.Click += new System.EventHandler(this.btnEliminarpila_Click);
             // 
             // btnReportepila
             // 
@@ -165,6 +166,7 @@
             this.btnReportepila.TabIndex = 0;
             this.btnReportepila.Text = "Reporte";
             this.btnReportepila.UseVisualStyleBackColor = true;
+            this.btnReportepila.Click += new System.EventHandler(this.btnReportepila_Click);
             // 
             // tabCola
             // 
@@ -195,6 +197,7 @@
             this.btnEliminarcola.TabIndex = 4;
             this.btnEliminarcola.Text = "Eliminar";
             this.btnEliminarcola.UseVisualStyleBackColor = true;
+            this.btnEliminarcola.Click += new System.EventHandler(this.btnEliminarcola_Click);
             // 
             // btnReportecola
             // 
@@ -204,6 +207,7 @@
             this.btnReportecola.TabIndex = 3;
             this.btnReportecola.Text = "Reporte";
             this.btnReportecola.UseVisualStyleBackColor = true;
+            this.btnReportecola.Click += new System.EventHandler(this.btnReportecola_Click);
             // 
             // tabLista
             // 
@@ -233,6 +237,7 @@
             this.btnEliminarlista.TabIndex = 7;
             this.btnEliminarlista.Text = "Eliminar";
             this.btnEliminarlista.UseVisualStyleBackColor = true;
+            this.btnEliminarlista.Click += new System.EventHandler(this.btnEliminarlista_Click);
             // 
             // btnReportelista
             // 
@@ -242,6 +247,7 @@
             this.btnReportelista.TabIndex = 6;
             this.btnReportelista.Text = "Reporte";
             this.btnReportelista.UseVisualStyleBackColor = true;
+            this.btnReportelista.Click += new System.EventHandler(this.btnReportelista_Click);
             // 
             // cmbTipoestructura
             // 
@@ -394,6 +400,7 @@
             this.txtReportedatos.Name = "txtReportedatos";
             this.txtReportedatos.Size = new System.Drawing.Size(224, 24);
             this.txtReportedatos.TabIndex = 12;
+            this.txtReportedatos.TextChanged += new System.EventHandler(this.txtReportedatos_TextChanged);
             // 
             // txtValorcopago
             // 
