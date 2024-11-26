@@ -23,6 +23,12 @@ namespace WilliamAlvarezFase3Grupo108
         private string vcopago;
         private string fechaAcceso;
         private string tEstructura;
+
+        // variables de control para el reporte de los datos
+
+        private int intReportepila;
+        private int intReportecola;
+        private int intreportelista;
        // private string reporteDatos;
 
         Stack<estructuraDatosusuario> pila = new Stack<estructuraDatosusuario>();    
@@ -35,6 +41,25 @@ namespace WilliamAlvarezFase3Grupo108
             // declaracion del metodo cargar ElementosIniciales
 
             cargarElementosIniciales();
+            // inicializacion variables que capturan el reporte 
+
+            this.intreportelista = 0;
+            this.intReportecola = 0;
+            this.intreportelista = 0;
+
+            //desabilitar botones reporte pila cola y lista
+
+            this.btnReportepila.Enabled = false;
+            this.btnReportecola.Enabled = false;
+            this.btnReportelista.Enabled = false;
+
+            //desabilitar botones Eliminar pila cola y lista
+
+            this.btnEliminarpila.Enabled = false;
+            this.btnEliminarcola.Enabled = false;
+            this.btnEliminarlista.Enabled = false; 
+
+
 
         }
         // crear metodo que no retorna nada de cargarElemenotsIniciales
@@ -331,7 +356,10 @@ namespace WilliamAlvarezFase3Grupo108
                     dgPila.DataSource= this.pila.ToArray();
                     this.tabEstructuras.SelectedIndex = 0;
                     MessageBox.Show("el registro fue agregado a la pila ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+                    this.btnReportepila.Enabled = true;
+                    this.btnEliminarpila.Enabled = true;
+                    ;
+
 
                 }
 
@@ -345,8 +373,9 @@ namespace WilliamAlvarezFase3Grupo108
                     dgCola.DataSource = this.Cola.ToArray();
                     this.tabEstructuras.SelectedIndex = 1;
                     MessageBox.Show("el registro fue agregado a la cola ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+                    this.btnReportecola.Enabled = true;
+                    this.btnEliminarcola.Enabled = true;
+                    
                 }
 
                 if (this.tEstructura.Equals("Lista"))
@@ -359,10 +388,12 @@ namespace WilliamAlvarezFase3Grupo108
                     dgLista.DataSource = this.Lista.ToArray();
                     this.tabEstructuras.SelectedIndex = 2;
                     MessageBox.Show("el registro fue agregado a la lista ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    this.btnReportelista.Enabled = true;
+                    this.btnEliminarlista.Enabled = true;
 
                 }
 
+                cargarElementosIniciales();
 
 
             }
