@@ -26,8 +26,8 @@ namespace WilliamAlvarezFase3Grupo108
        // private string reporteDatos;
 
         Stack<estructuraDatosusuario> pila = new Stack<estructuraDatosusuario>();    
-
-
+        Queue<estructuraDatosusuario> Cola = new Queue<estructuraDatosusuario>();
+        List<estructuraDatosusuario> Lista = new List<estructuraDatosusuario>();
 
         public frmIngresodatos()
         {
@@ -319,6 +319,7 @@ namespace WilliamAlvarezFase3Grupo108
                 miEstructura.tAtencion= this.tAtencion;
                 miEstructura.vCopago = int.Parse(this.vcopago);
                 miEstructura.fechaAcceso = this.fechaAcceso;
+                miEstructura.tEstructura = this.tEstructura;
 
                 if (this.tEstructura.Equals("Pila")) 
 
@@ -328,7 +329,36 @@ namespace WilliamAlvarezFase3Grupo108
                     // como se refleja en el dataGribView
                     dgPila.DataSource = null;
                     dgPila.DataSource= this.pila.ToArray();
+                    this.tabEstructuras.SelectedIndex = 0;
                     MessageBox.Show("el registro fue agregado a la pila ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+
+                }
+
+                if (this.tEstructura.Equals("Cola"))
+
+                {
+                    this.Cola.Enqueue(miEstructura);
+
+                    // como se refleja en el dataGribView
+                    dgCola.DataSource = null;
+                    dgCola.DataSource = this.Cola.ToArray();
+                    this.tabEstructuras.SelectedIndex = 1;
+                    MessageBox.Show("el registro fue agregado a la cola ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+
+                if (this.tEstructura.Equals("Lista"))
+
+                {
+                    this.Lista.Add(miEstructura);
+
+                    // como se refleja en el dataGribView
+                    dgLista.DataSource = null;
+                    dgLista.DataSource = this.Lista.ToArray();
+                    this.tabEstructuras.SelectedIndex = 2;
+                    MessageBox.Show("el registro fue agregado a la lista ", "confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 }
